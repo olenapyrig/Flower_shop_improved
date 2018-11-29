@@ -34,31 +34,22 @@ public class OwnBouquet extends FlowerList {
         Scanner sc2 = new Scanner(System.in);
         int chamomile_num = sc2.nextInt();
 
-
+        Color color = Flower.getRandomColor();
+        int length = Flower.getRandomLength();
+        float price = Flower.getRandomPrice();
+        Country country = Flower.getRandomCountry();
         for (int i = 0; i <= rose_num; i++) {
-            Color color = Flower.getRandomColor();
-            int length = Flower.getRandomLength();
-            float price = Flower.getRandomPrice();
-            Country country = Flower.getRandomCountry();
-            total_price = total_price + price * rose_num;
             flowers.add(new Rose(color, length, country, price));
         }
         for (int i = 0; i <= tulip_num; i++) {
-            Color color = Flower.getRandomColor();
-            int length = Flower.getRandomLength();
-            float price = Flower.getRandomPrice();
-            Country country = Flower.getRandomCountry();
             total_price = total_price + price * tulip_num;
             flowers.add(new Tulip(color, length, country, price));
         }
         for (int i = 0; i <= chamomile_num; i++) {
-            Color color = Flower.getRandomColor();
-            int length = Flower.getRandomLength();
-            float price = Flower.getRandomPrice();
-            Country country = Flower.getRandomCountry();
             total_price = total_price + price * chamomile_num;
             flowers.add(new Chamomile(color, length, country, price));
         }
+
         return new OwnBouquet(flowers);
     }
 
