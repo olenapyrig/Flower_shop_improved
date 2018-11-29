@@ -34,17 +34,14 @@ public class Bouquet extends FlowerList {
             int length = Flower.getRandomLength();
             float price = Flower.getRandomPrice();
             Country country = Flower.getRandomCountry();
-
-            switch (flowerType) {
-                case 0:
-                    flowers.add(new Rose(color, length, country, price));
-                    break;
-                case 1:
+            if (flowerType==0) {
+                flowers.add(new Rose(color, length, country, price));
+            }
+            if (flowerType==1) {
                     flowers.add(new Chamomile(color, length, country, price));
-                    break;
-                case 2:
+            }else {
                     flowers.add(new Tulip(color, length, country, price));
-                    break;
+
             }
         }
 
